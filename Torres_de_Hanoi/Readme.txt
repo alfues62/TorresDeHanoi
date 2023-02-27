@@ -37,3 +37,16 @@ siguientes commits:
 • Implementado algoritmo iterativo.
 • IMPORTANTE: En caso de alumnos de alumnos que hayan cursado anteriormente la asignatura, no se dar´an por v´alidos los commits de otros cursos.
 Los alumnos deben repetir la pr´actica y actualizar el c´odigo al curso actual.
+
+
+
+
+set
+            {
+                this.ValorDisco = value;
+            }// () set            
+
+            get
+            {
+                return this.ValorDisco;
+            }//() get
