@@ -10,14 +10,11 @@ namespace Torres_de_Hanoi
     // El mas pequeño tendrá valor de 1 y el más grande tendrá valor de n, que en nuestros caso será 3
     class Disco
     {
-        public int Valor { get; set; }
-        public int Pos { get; set; }
+        public int Valor { get; }
 
-        public Disco(int valorDisco, int posicion)
+        public Disco(int valorDisco)
         {
             this.Valor = valorDisco;
-            this.Pos = posicion;
-
 
         }//() Constructor Disco
 

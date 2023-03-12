@@ -1,0 +1,8 @@
+C:\UPV\GitKraken\TorresDeHanoi\Torres_de_Hanoi\obj\Debug\Torres_de_Hanoi.csproj.AssemblyReference.cache
+C:\UPV\GitKraken\TorresDeHanoi\Torres_de_Hanoi\obj\Debug\Torres_de_Hanoi.csproj.SuggestedBindingRedirects.cache
+C:\UPV\GitKraken\TorresDeHanoi\Torres_de_Hanoi\obj\Debug\Torres_de_Hanoi.csproj.CoreCompileInputs.cache
+C:\UPV\GitKraken\TorresDeHanoi\Torres_de_Hanoi\bin\Debug\Torres_de_Hanoi.exe.config
+C:\UPV\GitKraken\TorresDeHanoi\Torres_de_Hanoi\bin\Debug\Torres_de_Hanoi.exe
+C:\UPV\GitKraken\TorresDeHanoi\Torres_de_Hanoi\bin\Debug\Torres_de_Hanoi.pdb
+C:\UPV\GitKraken\TorresDeHanoi\Torres_de_Hanoi\obj\Debug\Torres_de_Hanoi.exe
+C:\UPV\GitKraken\TorresDeHanoi\Torres_de_Hanoi\obj\Debug\Torres_de_Hanoi.pdb
