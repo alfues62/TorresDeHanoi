@@ -9,18 +9,34 @@ namespace Torres_de_Hanoi
 {
     class Hanoi
     {
-        /*TODO: Implementar métodos*/
         public void mover_disco(Pila a, Pila b)
         {
-            if (!a.isEmpty() && (b.isEmpty() || a.Top.Valor < b.Top.Valor))
+
+            if (!a.isEmpty() && b.isEmpty())
             {
                 Disco discoAux = a.pop();
                 b.push(discoAux);
-                Console.WriteLine("Se movió el disco " + discoAux.Valor + " desde la pila " + a +" hasta la pila " + b);
+
+                Console.WriteLine("Se movió el disco " + discoAux.Valor + " desde la pila " + a.Id + " hasta la pila " + b.Id);
+                Console.WriteLine(a.Size);
+                Console.WriteLine(b.Size);
+            }
+            else if (a.Top.Valor < b.Top.Valor)
+            {
+                Disco discoAux = a.pop();
+                b.push(discoAux);
+
+                Console.WriteLine("12332165Se movió el disco " + discoAux.Valor + " desde la pila " + a.Id + " hasta la pila " + b.Id);
+                Console.WriteLine(a.Size);
+                Console.WriteLine(b.Size);
             }
             else
             {
-                Console.WriteLine("NO SE PUEDE REALIZAR LA OPERACIÓN");
+
+                Console.WriteLine("No Hace desde la pila ");
+                Console.WriteLine(a.Size);
+                Console.WriteLine(b.Size);
+
             }
         }
 
@@ -28,36 +44,29 @@ namespace Torres_de_Hanoi
         {
             double movPred = Math.Pow(2, numDisc) - 1;
             double mov = 0;
-        
+
             if (movPred % 2 == 1)
             {
-                while (mov < movPred)
-                {
-                    mover_disco(ini, fin);
-                    mover_disco(ini, aux);
-                    mover_disco(aux, fin);
-                    mover_disco(aux, ini);
-                    mover_disco(fin, ini);
-                    mover_disco(fin, aux);
 
-                    mov += 3;
-                }
-            }
-            else
-            {
                 while (mov < movPred)
                 {
-                    mover_disco(ini, aux);
                     mover_disco(ini, fin);
+                    mov += 1;
+                    mover_disco(ini, aux);
+                    mov += 1;
+                    mover_disco(aux, ini);
+                    mov += 1;
                     mover_disco(aux, fin);
-                    mov += 3;
-                }
-            }
+                    mov += 1;
+                    mover_disco(fin, ini);
+                    mov += 1;
+                    mover_disco(fin, aux);
+                    mov += 1;
+                }//While
+            }// If
 
             return (int)mov;
-
-        }
-    }
-}
-
- 
+        
+        }//Iterativo
+    }// Class
+}// Hanoi

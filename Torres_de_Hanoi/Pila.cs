@@ -9,13 +9,15 @@ namespace Torres_de_Hanoi
 {
     class Pila
     {
+        public int Id { get; }
         public int Size;
         public Disco Top { get; set; }
         public List<Disco> Elementos { get; set; }
        
 
-        public Pila()
+        public Pila(int identPila)
         {
+            this.Id = identPila;
             this.Size = 0;
             this.Top = null;
             this.Elementos = new List<Disco>();
@@ -33,11 +35,10 @@ namespace Torres_de_Hanoi
         {
             if (this.Elementos.Count == 0)
             {
-                // Si la lista está vacía, se devuelve un valor nulo o se lanza una excepción
                 return null;
             }
             else
-            {
+            { 
                 // Se obtiene el último elemento de la lista y se elimina de la misma
                 Disco ultimoElemento = this.Elementos[this.Elementos.Count - 1];
                 this.Elementos.RemoveAt(this.Elementos.Count - 1);

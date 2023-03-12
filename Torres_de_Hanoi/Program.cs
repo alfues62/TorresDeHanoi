@@ -11,15 +11,12 @@ namespace Torres_de_Hanoi
 
         static void Main(string[] args)
         {
-            Pila ini = new Pila();
-            Pila aux = new Pila();
-            Pila fin = new Pila();
+            
 
-            /*
-            Disco d1 = new Disco(1);
-            Disco d2 = new Disco(2);
-            Disco d3 = new Disco(3);
-            */
+            Pila ini = new Pila(1);
+            Pila aux = new Pila(2);
+            Pila fin = new Pila(3);
+
 
             Console.WriteLine("Bienvenido al juego de las Torres de Hanoi");
             Console.Write("Por favor, introduce el número de discos que quieres jugar: ");
@@ -35,6 +32,7 @@ namespace Torres_de_Hanoi
             Hanoi juegoHanoi = new Hanoi();
             int movimientos = juegoHanoi.iterativo(numDiscos, ini, fin, aux);
 
+            Console.WriteLine("Juego Completado en " + movimientos + " Movimientos.");
 
             // Keep the console window open in debug mode.
             Console.WriteLine("Press any key to exit.");
