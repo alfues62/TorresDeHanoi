@@ -9,6 +9,8 @@ namespace Torres_de_Hanoi
 {
     class Hanoi
     {
+        double mov = 0;
+
         public void mover_disco(Pila a, Pila b)
         {
 
@@ -26,23 +28,25 @@ namespace Torres_de_Hanoi
                 Disco discoAux = a.pop();
                 b.push(discoAux);
 
-                Console.WriteLine("12332165Se movió el disco " + discoAux.Valor + " desde la pila " + a.Id + " hasta la pila " + b.Id);
+                Console.WriteLine(" a Se movió el disco " + discoAux.Valor + " desde la pila " + a.Id + " hasta la pila " + b.Id);
                 Console.WriteLine(a.Size);
                 Console.WriteLine(b.Size);
             }
             else
             {
 
-                Console.WriteLine("No Hace desde la pila ");
+                Console.WriteLine("No Hace desde la pila "+a.Id + " a " + b.Id );
                 Console.WriteLine(a.Size);
                 Console.WriteLine(b.Size);
+                mov--;
 
             }
         }
 
         public int iterativo(int numDisc, Pila ini, Pila fin, Pila aux)
         {
-            double movPred = Math.Pow(2, numDisc) - 1;
+            double movPred = Math.Pow(2, numDisc) -1 ;
+            Console.WriteLine(movPred);
             double mov = 0;
 
             if (movPred % 2 == 1)
@@ -62,8 +66,28 @@ namespace Torres_de_Hanoi
                     mov += 1;
                     mover_disco(fin, aux);
                     mov += 1;
+
                 }//While
             }// If
+            else
+            {
+                while (mov < movPred)
+                {
+                    mover_disco(ini, fin);
+                    mov += 1;
+                    mover_disco(ini, aux);
+                    mov += 1;
+                    mover_disco(aux, ini);
+                    mov += 1;
+                    mover_disco(aux, fin);
+                    mov += 1;
+
+                    mover_disco(fin, ini);
+                    mov += 1;
+                    mover_disco(fin, aux);
+                    mov += 1;
+                }//While
+            }
 
             return (int)mov;
         

@@ -35,13 +35,16 @@ namespace Torres_de_Hanoi
         {
             if (this.Elementos.Count == 0)
             {
+                this.Size--;
                 return null;
+                
             }
             else
             { 
                 // Se obtiene el último elemento de la lista y se elimina de la misma
                 Disco ultimoElemento = this.Elementos[this.Elementos.Count - 1];
                 this.Elementos.RemoveAt(this.Elementos.Count - 1);
+                this.Size--;
                 return ultimoElemento;
             }
         }
