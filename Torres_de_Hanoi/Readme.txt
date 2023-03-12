@@ -1,4 +1,4 @@
-﻿** Criterios de evaluación **
+﻿Criterios de evaluación
 
 Funcionamiento completo incluyendo opcional: 10.
 Funcionamiento completo sin incluir opcional: 8.
@@ -14,14 +14,14 @@ Hay alg´un error grave: entre 1 y 5 puntos puntos.
 No se expone ni se entrega: 0 puntos.
 Cualquier modificaci´on de estos criterios, se informar´a con suficiente antelaci´on
 
-** Normativa **
+Normativa
 
 Las pr´acticas se realizar´an de forma individual o por grupos de 2 alumnos.
 La pr´actica se realizar´a usando la versi´on de Visual Studio 2022.
 Cualquier intento de plagio implicar´a una calificaci´on de 0 en la pr´actica y la comunicaci´on
 oficial del plagio a la direcci´on del grado.
 
-** Entrega y exposición **
+Entrega y exposición
 
 Se realizar´a la entrega del proyecto en la plataforma dentro de la fecha l´ımite. Para ello, se
 entregar´a el enlace al repositorio Git del alumno donde se haya desarrollado la pr´acica.
@@ -37,3 +37,16 @@ siguientes commits:
 • Implementado algoritmo iterativo.
 • IMPORTANTE: En caso de alumnos de alumnos que hayan cursado anteriormente la asignatura, no se dar´an por v´alidos los commits de otros cursos.
 Los alumnos deben repetir la pr´actica y actualizar el c´odigo al curso actual.
+
+
+
+
+set
+            {
+                this.ValorDisco = value;
+            }// () set            
+
+            get
+            {
+                return this.ValorDisco;
+            }//() get
