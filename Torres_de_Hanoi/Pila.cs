@@ -23,6 +23,8 @@ namespace Torres_de_Hanoi
             this.Elementos = new List<Disco>(); // Lista por pila
         }
 
+
+
         public void push(Disco d) // Disco d es un disco que declaramos en Hanoi
         {
             this.Elementos.Add(d); // Añade el disco al final de la pila.
@@ -35,7 +37,6 @@ namespace Torres_de_Hanoi
         {
             if (this.Elementos.Count == 0)
             {
-                this.Size--;
                 return null;
                 
             }
