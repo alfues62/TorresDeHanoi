@@ -13,14 +13,15 @@ namespace Torres_de_Hanoi
         {
             
 
-            Pila ini = new Pila(1);
-            Pila aux = new Pila(2);
-            Pila fin = new Pila(3);
+            Pila ini = new Pila("Ini");
+            Pila aux = new Pila("Aux");
+            Pila fin = new Pila("Fin");
 
 
             Console.WriteLine("Bienvenido al juego de las Torres de Hanoi");
             Console.Write("Por favor, introduce el número de discos que quieres jugar: ");
             int numDiscos = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine();
 
             // Agregamos los discos a la torre inicial
             for (int i = numDiscos; i > 0; i--)

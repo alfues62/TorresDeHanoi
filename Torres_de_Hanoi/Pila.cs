@@ -9,29 +9,29 @@ namespace Torres_de_Hanoi
 {
     class Pila
     {
-        public int Id { get; }
+        public string Id { get; }
         public int Size;
         public Disco Top { get; set; }
         public List<Disco> Elementos { get; set; }
        
 
-        public Pila(int identPila)
+        public Pila(string identPila)   // Identificativo de pila
         {
             this.Id = identPila;
-            this.Size = 0;
-            this.Top = null;
-            this.Elementos = new List<Disco>();
+            this.Size = 0;              // Tamaño de la lista por pila
+            this.Top = null;            // Disco más alto por pila 
+            this.Elementos = new List<Disco>(); // Lista por pila
         }
 
         public void push(Disco d) // Disco d es un disco que declaramos en Hanoi
         {
             this.Elementos.Add(d); // Añade el disco al final de la pila.
-            this.Size++;
-            this.Top = d;
+            this.Size++;           // Agranda la lista
+            this.Top = d;          // Asigna el disco más alto
         }
 
 
-        public Disco pop()
+        public Disco pop()          
         {
             if (this.Elementos.Count == 0)
             {
@@ -50,8 +50,8 @@ namespace Torres_de_Hanoi
         }
 
 
-        public bool isEmpty()
-        {
+        public bool isEmpty()       // Comprobar si esta vacio
+        {   
             if(this.Elementos.Count == 0)
             {
                 return true;
